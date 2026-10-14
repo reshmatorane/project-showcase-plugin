@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </linearGradient>
+    <linearGradient id="plane" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  
+  <!-- Flight Path Lines -->
+  <path d="M 60 420 Q 280 340 420 180 T 740 100" fill="none" stroke="#7dd3fc" stroke-width="4" stroke-dasharray="12 6" opacity="0.7"/>
+  <circle cx="740" cy="100" r="10" fill="#38bdf8" filter="url(#glow)"/>
+  
+  <!-- Jet Vector Silhouette -->
+  <polygon points="420,180 360,210 375,190 320,185 300,195 310,180 300,165 320,175 375,170 360,150" fill="url(#plane)" filter="url(#glow)"/>
+
+  <!-- Info Box -->
+  <rect x="80" y="80" width="260" height="150" rx="14" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1.5" opacity="0.95"/>
+  <text x="105" y="120" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#38bdf8" letter-spacing="1.5">AEROSPACE</text>
+  <text x="105" y="155" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#ffffff">AeroSky Cargo</text>
+  <text x="105" y="190" font-family="system-ui, sans-serif" font-size="13" fill="#bae6fd">Global Air Freight Tracking</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a044e"/>
+      <stop offset="50%" stop-color="#701a75"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  
+  <!-- Collaborative Graph Nodes -->
+  <g stroke="#f472b6" stroke-width="2" opacity="0.4">
+    <line x1="200" y1="200" x2="350" y2="150"/>
+    <line x1="350" y1="150" x2="480" y2="240"/>
+    <line x1="480" y1="240" x2="380" y2="350"/>
+    <line x1="380" y1="350" x2="200" y2="200"/>
+  </g>
+  <circle cx="200" cy="200" r="16" fill="#f472b6" filter="url(#glow)"/>
+  <circle cx="350" cy="150" r="12" fill="#c084fc"/>
+  <circle cx="480" cy="240" r="20" fill="#e879f9" filter="url(#glow)"/>
+  <circle cx="380" cy="350" r="14" fill="#f472b6"/>
+  
+  <!-- Info Box -->
+  <rect x="480" y="80" width="260" height="150" rx="14" fill="#581c87" stroke="#c084fc" stroke-width="1.5" opacity="0.95"/>
+  <text x="505" y="120" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#f0abfc" letter-spacing="1.5">EDTECH</text>
+  <text x="505" y="155" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#ffffff">NexaLearn</text>
+  <text x="505" y="190" font-family="system-ui, sans-serif" font-size="13" fill="#e9d5ff">Collaborative AI Campus</text>
+</svg>

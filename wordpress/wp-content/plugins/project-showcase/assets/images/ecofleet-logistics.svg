@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="60%" stop-color="#075985"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  
+  <!-- Map Route Simulation -->
+  <path d="M 100 380 Q 220 180 340 320 T 560 160 T 700 240" fill="none" stroke="url(#route)" stroke-width="6" stroke-dasharray="10 6" filter="url(#glow)"/>
+  
+  <!-- Waypoints -->
+  <circle cx="100" cy="380" r="10" fill="#38bdf8" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="340" cy="320" r="8" fill="#38bdf8"/>
+  <circle cx="560" cy="160" r="12" fill="#4ade80" stroke="#ffffff" stroke-width="3" filter="url(#glow)"/>
+  
+  <!-- Van Silhouette / Telemetry Card -->
+  <rect x="80" y="80" width="260" height="150" rx="14" fill="#0369a1" stroke="#38bdf8" stroke-width="1.5" opacity="0.95"/>
+  <text x="105" y="120" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#7dd3fc" letter-spacing="1.5">LOGISTICS</text>
+  <text x="105" y="155" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#ffffff">EcoFleet</text>
+  <text x="105" y="190" font-family="system-ui, sans-serif" font-size="13" fill="#bae6fd">EV Telemetry & Dynamic Routing</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="50%" stop-color="#27272a"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+    <linearGradient id="speed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  
+  <!-- Speedometer Arc -->
+  <path d="M 180 320 A 140 140 0 1 1 460 320" fill="none" stroke="#3f3f46" stroke-width="16" stroke-linecap="round"/>
+  <path d="M 180 320 A 140 140 0 1 1 380 200" fill="none" stroke="url(#speed)" stroke-width="16" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="320" cy="320" r="16" fill="#60a5fa"/>
+  <line x1="320" y1="320" x2="380" y2="210" stroke="#f87171" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Info Box -->
+  <rect x="490" y="80" width="260" height="150" rx="14" fill="#18181b" stroke="#3b82f6" stroke-width="1.5" opacity="0.95"/>
+  <text x="515" y="120" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#93c5fd" letter-spacing="1.5">AUTOMOTIVE</text>
+  <text x="515" y="155" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#ffffff">AutoPulse</text>
+  <text x="515" y="190" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">Connected Fleet Diagnostics</text>
+</svg>
